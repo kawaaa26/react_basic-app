@@ -3,6 +3,10 @@ h1, h2, h3, p {
     text-align: center;
 }
 
+.content {
+    text-align: center;
+}
+
 .wrap {
     position: relative;
     width:100%;
