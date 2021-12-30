@@ -8,11 +8,19 @@ const Article = (props) => {
   const [isChanged, setIsChanged] = useState("Default Button Content")
 
   const publishArticle = () => {
-    setIsPublished(true)
+    if (isPublished === true) {
+      setIsPublished(false)
+    } else {
+      setIsPublished(true)
+    }
   }
 
   const changeButtonContent = () => {
-    setIsChanged("Updated Button Content")
+    if (isChanged === "Default Button Content") {
+      setIsChanged("Updated Button Content")
+    } else {
+      setIsChanged("Default Button Content")
+    }
   }
 
   return (

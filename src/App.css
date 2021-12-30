@@ -3,6 +3,14 @@ h1, h2, h3, p {
     text-align: center;
 }
 
+img {
+    padding-right: 10px;
+}
+
+/* h2 { */
+/*     vertical-align: center; */
+/* } */
+
 .content {
     text-align: center;
 }
@@ -100,3 +108,10 @@ video {
 /*     transform: rotate(360deg); */
 /*   } */
 /* } */
+
+.flex__row {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
