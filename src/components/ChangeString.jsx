@@ -1,8 +1,10 @@
+import Button from '@mui/material/Button';
+
 const ChangeString = (props) => {
   return (
-    <button onClick={() => props.onClick()}>
+    <Button onClick={() => props.onClick()} variant="contained">
       Button Content: {props.isChanged}
-    </button>
+    </Button>
   )
 }
 
