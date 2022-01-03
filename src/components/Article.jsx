@@ -15,7 +15,7 @@ const Article = (props) => {
   const [isSwitched, setIsSwitched] = useState({
     status: false,
     content: defaultContent,
-    color: "primary",
+    color: "warning",
   });
 
   const publishArticle = () => {
@@ -40,7 +40,7 @@ const Article = (props) => {
       setIsSwitched({
         status: false,
         content: defaultContent,
-        color: "primary",
+        color: "warning",
       });
     } else {
       console.log('else behaved.')
@@ -63,7 +63,7 @@ const Article = (props) => {
       <br /><br />
       <ChangeString isChanged={isChanged} onClick={changeButtonContent} />
       <br /><br />
-      <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} content={isSwitched["content"]} />
+      <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} />
     </div>
   )
 }
