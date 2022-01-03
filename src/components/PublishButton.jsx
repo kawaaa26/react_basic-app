@@ -11,6 +11,7 @@ const PublishButton = (props) => {
       <Button onClick={ () => props.onClick() } variant="contained" color="success">
         公開状態： {props.isPublished.toString()}
       </Button>
+      <br />
       <IconButton aria-label="fingerprint" color="secondary">
         <Fingerprint />
       </IconButton>

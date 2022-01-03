@@ -1,11 +1,22 @@
 import React from "react";
 import { useState } from "react";
-import { Title, Content, PublishButton, ChangeString } from "./index";
+import { Title, Content, PublishButton, ChangeString, SwitchButton } from "./index";
+import Button from '@mui/material/Button';
 
 const Article = (props) => {
 
+  // SwitchButton state for content
+  const defaultContent = "🐶 Before Update Content"
+  const updatedContent = "😺 After Update Content"
+
   const [isPublished, setIsPublished] = useState(false)
   const [isChanged, setIsChanged] = useState("Default Button Content")
+
+  const [isSwitched, setIsSwitched] = useState({
+    status: false,
+    content: defaultContent,
+    color: "warning",
+  });
 
   const publishArticle = () => {
     if (isPublished === true) {
@@ -23,13 +34,36 @@ const Article = (props) => {
     }
   }
 
+  const switchButtonContent = () => {
+    if (isSwitched["status"] === true) {
+      console.log('if behaved.')
+      setIsSwitched({
+        status: false,
+        content: defaultContent,
+        color: "warning",
+      });
+    } else {
+      console.log('else behaved.')
+      setIsSwitched({
+        status: true,
+        content: updatedContent,
+        color: "success",
+      });
+    }
+  }
+
   return (
     <div className="content">
       <Title title={props.title} />
       <Content content={props.content} />
       <PublishButton isPublished={isPublished} onClick={publishArticle} />
-      <button onClick={ () => setIsPublished(true) }>公開</button>
+      <Button onClick={ () => setIsPublished(true) } variant="contained" color="secondary">
+        公開
+      </Button>
+      <br /><br />
       <ChangeString isChanged={isChanged} onClick={changeButtonContent} />
+      <br /><br />
+      <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} />
     </div>
   )
 }
