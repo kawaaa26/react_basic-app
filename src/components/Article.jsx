@@ -5,19 +5,18 @@ import Button from '@mui/material/Button';
 
 const Article = (props) => {
 
+  // SwitchButton state for content
+  const defaultContent = "🐶 Before Update Content"
+  const updatedContent = "😺 After Update Content"
+
   const [isPublished, setIsPublished] = useState(false)
   const [isChanged, setIsChanged] = useState("Default Button Content")
 
-  // SwitchButton state
-  // const defaultContent = "🐶 Before Update Content"
-  // const updatedContent = "😺 After Update Content"
-
-  const [isSwitched, setIsSwitched] = useState(false)
-
-  // const [isSwitched, setIsSwitched] = useState({
-  //   status: false,
-  //   content: defaultContent,
-  // });
+  const [isSwitched, setIsSwitched] = useState({
+    status: false,
+    content: defaultContent,
+    color: "primary",
+  });
 
   const publishArticle = () => {
     if (isPublished === true) {
@@ -36,26 +35,24 @@ const Article = (props) => {
   }
 
   const switchButtonContent = () => {
-    if (isSwitched === true) {
-      setIsSwitched(false)
+    if (isSwitched["status"] === true) {
+      console.log('if is executed.')
+      setIsSwitched({
+        status: false,
+        content: defaultContent,
+        color: "primary",
+      });
+    } else if (isSwitched["status"] === false) {
+      console.log('else if is executed.')
+      setIsSwitched({
+        status: true,
+        content: updatedContent,
+        color: "success",
+      });
     } else {
-      setIsSwitched(true)
+      console.log("something is wrong with props in the block.")
     }
   }
-
-  // const switchButtonContent = () => {
-  //   if (isSwitched["status"] === true) {
-  //     setIsSwitched({
-  //       status: true,
-  //       content: updatedContent,
-  //     });
-  //   } else {
-  //     setIsSwitched({
-  //       status: false,
-  //       content: defaultContent,
-  //     });
-  //   }
-  // }
 
   return (
     <div className="content">
@@ -68,7 +65,7 @@ const Article = (props) => {
       <br /><br />
       <ChangeString isChanged={isChanged} onClick={changeButtonContent} />
       <br /><br />
-      <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} />
+      <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} content={isSwitched["content"]} />
     </div>
   )
 }
