@@ -5,11 +5,11 @@ const SwitchButton = (props) => {
   // console.log(props.isSwitched["status"])
   // console.log(props.isSwitched["content"])
   // console.log(props.isSwitched["color"])
-  console.log(`props named: content is... ${props.content}`);
-  console.log(`props named: onClick is... ${props.onClick}`);
-  console.log(`props ["status"] in isSwitched is... ${props.isSwitched["status"]}`)
-  console.log(`props ["content"] in isSwitched is... ${props.isSwitched["content"]}`)
-  console.log(`props ["color"] in isSwitched is... ${props.isSwitched["color"]}`)
+  // console.log(`props named: content is... ${props.content}`);
+  // console.log(`props named: onClick is... ${props.onClick}`);
+  // console.log(`props ["status"] in isSwitched is... ${props.isSwitched["status"]}`)
+  // console.log(`props ["content"] in isSwitched is... ${props.isSwitched["content"]}`)
+  // console.log(`props ["color"] in isSwitched is... ${props.isSwitched["color"]}`)
 
   // below blocks are disabled for attempted version.
   // const defaultContent = "🐶 Before Update Content"

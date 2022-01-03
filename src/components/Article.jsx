@@ -36,21 +36,19 @@ const Article = (props) => {
 
   const switchButtonContent = () => {
     if (isSwitched["status"] === true) {
-      console.log('if is executed.')
+      console.log('if behaved.')
       setIsSwitched({
         status: false,
         content: defaultContent,
         color: "primary",
       });
-    } else if (isSwitched["status"] === false) {
-      console.log('else if is executed.')
+    } else {
+      console.log('else behaved.')
       setIsSwitched({
         status: true,
         content: updatedContent,
         color: "success",
       });
-    } else {
-      console.log("something is wrong with props in the block.")
     }
   }
 
