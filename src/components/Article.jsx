@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Title, Content, PublishButton, ChangeString, SwitchButton, TextInput, Counter, ToggleButton } from "./index";
+import { Title, Content, PublishButton, ChangeString, SwitchButton, TextInput, Counter, ToggleButton, ToggleSubscribe } from "./index";
 import Button from '@mui/material/Button';
 
 const Article = (props) => {
@@ -70,6 +70,8 @@ const Article = (props) => {
       <Counter />
       <br /><br />
       <ToggleButton />
+      <br /><br />
+      <ToggleSubscribe />
     </div>
   )
 }
