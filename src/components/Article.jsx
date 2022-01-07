@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Title, Content, PublishButton, ChangeString, SwitchButton } from "./index";
+import { Title, Content, PublishButton, ChangeString, SwitchButton, TextInput, Counter, ToggleButton } from "./index";
 import Button from '@mui/material/Button';
 
 const Article = (props) => {
@@ -64,6 +64,12 @@ const Article = (props) => {
       <ChangeString isChanged={isChanged} onClick={changeButtonContent} />
       <br /><br />
       <SwitchButton isSwitched={isSwitched} onClick={switchButtonContent} />
+      <br /><br />
+      <TextInput />
+      <br /><br />
+      <Counter />
+      <br /><br />
+      <ToggleButton />
     </div>
   )
 }
