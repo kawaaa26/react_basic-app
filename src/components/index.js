@@ -7,3 +7,6 @@ export { default as Profile } from './Profile'
 export { default as PublishButton } from './PublishButton'
 export { default as ChangeString } from './ChangeString'
 export { default as SwitchButton } from './SwitchButton'
+export { default as TextInput } from './TextInput'
+export { default as Counter } from './Counter'
+export { default as ToggleButton } from './ToggleButton';
