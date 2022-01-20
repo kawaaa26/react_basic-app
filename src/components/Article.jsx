@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Title, Content, PublishButton, ChangeString, SwitchButton, TextInput, Counter, ToggleButton, ToggleSubscribe } from "./index";
+import { Title, Content, PublishButton, ChangeString, SwitchButton, TextInput, Counter, ToggleButton, ToggleSubscribe, Account } from "./index";
+// GitHubAccount, DelayInputJudge (Components)
 import Button from '@mui/material/Button';
 
 const Article = (props) => {
@@ -72,6 +73,13 @@ const Article = (props) => {
       <ToggleButton />
       <br /><br />
       <ToggleSubscribe />
+      {/* <br /><br />
+      <GitHubAccount />
+      <br /><br />
+      <DelayInputJudge /> */}
+      <br /><br />
+      <Account />
+      <p>--------------------------------</p>
     </div>
   )
 }
